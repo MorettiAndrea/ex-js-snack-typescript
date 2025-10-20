@@ -7,12 +7,26 @@
 
 // Se è un booleano: stampa “Sì” o “No” in base al suo valore
 
+
 // In tutti gli altri casi: stampa “Tipo non supportato”
+
+let data: unknown ;
 
 // 🎯 BONUS
 // Se è null: stampa “Il dato è vuoto”
 // Se è un array: stampa la sua lunghezza
 // Se è una Promise: attendi che si risolva e stampa il valore del resolve.
+ 
+!data? console.log("Il dato è vuoto") : Array.isArray(data)?console.log(data.length) : data instanceof Promise? data.then(result => console.log(result)):typeof data ==="string"? console.log(data.toUpperCase()) : typeof data ==="number"?console.log(data*2) : typeof data ==="boolean"? console.log(data? "Si":"No")
+ : console.log("Tipo non supportato")
+
+
+
+
+
+
+
+
 // 🏆 Snack 2
 // Crea un type alias Dipendente che rappresenta un lavoratore con i seguenti dati:
 
